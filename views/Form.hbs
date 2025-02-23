@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+    <title>CRUD | Application</title>
+</head>
+<body>
+    {{>Nav}}
+   <div class="container">
+    <h3>Add New Employee</h3>
+     <form action="/form" method="post">
+    <div class="mb-3">
+    <label for="name" class="form-label">Name*</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter Your Full Name" name="name" value="{{data.name}}">
+    {{#if errorMessage.name}}
+    <p class="text-danger">{{errorMessage.name}}</p>
+    {{/if}}
+     </div>
+    <div class="row">
+    <div class="col-md-6 mb-3">
+    <label for="email" class="form-label">Email*</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter your Email ID" name="email" value="{{data.email}}">
+     {{#if errorMessage.email}}
+    <p class="text-danger">{{errorMessage.email}}</p>
+    {{/if}}
+  </div>
+    <div class="col-md-6 mb-3">
+    <label for="phone" class="form-label">Phone*</label>
+    <input type="number" class="form-control" id="phone" placeholder="Enter Your Contact Number" name="phone" value="{{data.phone}}">
+     {{#if errorMessage.phone}}
+    <p class="text-danger">{{errorMessage.phone}}</p>
+    {{/if}}
+  </div>
+  </div>
+  <div class="row">
+     <div class="col-md-6 mb-3">
+    <label for="dsg" class="form-label">Designation*</label>
+    <input type="text" class="form-control" id="dsg" placeholder="Example:- Developer" name="dsg" value="{{data.dsg}}">
+     {{#if errorMessage.dsg}}
+    <p class="text-danger">{{errorMessage.dsg}}</p>
+    {{/if}}
+    </div>
+  <div class="col-md-6 mb-3">
+    <label for="salary" class="form-label">Salary*</label>
+    <input type="number" class="form-control" id="salary" placeholder="Enter Your Current CTC In LPA " name="salary" value="{{data.salary}}">
+     {{#if errorMessage.salary}}
+    <p class="text-danger">{{errorMessage.salary}}</p>
+    {{/if}}
+  </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+    <label for="city" class="form-label">City</label>
+    <input type="text" class="form-control" id="city" placeholder="Enter Your City Name" name="city">
+  </div>
+  <div class="col-md-6 mb-3">
+    <label for="state" class="form-label">State</label>
+    <input type="text" class="form-control" id="state" placeholder="Enter Your State Name" name="state">
+  </div>
+    </div>
+    <div class="text-center">
+  <button type="submit" class="button btn btn-primary ">Submit</button>
+  </div>
+</form>
+   </div>
+   {{>Footer}}
+</body>
+</html>

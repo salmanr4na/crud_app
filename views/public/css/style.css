@@ -1,0 +1,29 @@
+.background{
+    background-color: #046169;
+}
+.cursor-default{
+    cursor: default;
+}
+p{
+    margin: 0;
+    padding: 10px;
+    
+}
+h3{
+    cursor: default;
+    text-align: center;
+    margin: 15px 0;
+    padding: 5px;
+    font-weight: 700;
+
+}
+.mid-section{
+    height: 67vh;
+    overflow: auto;
+}
+.mid-section::-webkit-scrollbar{
+    display: none;
+}
+.button{
+    margin-bottom: 45px;
+}
